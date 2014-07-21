@@ -1,4 +1,10 @@
 h1 {
   font-size: 4em;
-  color: #111111;
+  color: #654df0;
 }
+#space1, #space2, #space3, #space4, #space5, #space6, #space7, #space8, #space9 {
+  height: 260px;
+  width: 285px;
+  border: 5px solid black;
+}
+
