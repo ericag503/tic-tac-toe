@@ -32,11 +32,11 @@ var Space = {
 var Board = {
   initialize: function() {
 
+    this.spaces = [];
     for (var i = 1; i < 10; i++) {
       this.spaces.push(Space.create(i));
     };
-  },
-  spaces: []
+  }
 }
 
 var Game = {
@@ -45,8 +45,22 @@ var Game = {
     var player2 = Object.create(Player)
     player1.initialize("x");
     player2.initialize("o");
-  }
+    this.players = [];
+    this.players.push(player1);
+    this.players.push(player2);
+    this.currentPlayer = player1;
+  },
+  nextTurn: function() {
+      this.counter++
+      if ((this.counter % 2 !== 0) || (this.counter === 1)) {
+      this.currentPlayer = this.players[1];
+    } else {
+      this.currentPlayer = this.players[0];
+    }
+  },
+  counter: 0
 }
+
 
 // var player1 = Object.create(Player)
 // var player2 = Object.create(Player)
@@ -101,15 +115,11 @@ space9.initialize(2, 2)
 space9.spaceNum = 9;
 
 $(document).ready(function() {
-  var counter = 0;
-      counter = counter +=1;
-      console.log(counter);
 
-    if (counter % 2 !== 0 || counter === 1) {
+      //counter = counter +=1;
 
     $("div#space1").click(function() {
       $("div#space1").css("background-image", "url('img/x.png')");
-      counter = counter + 1
     });
 
     $("div#space2").click(function() {
@@ -122,63 +132,75 @@ $(document).ready(function() {
 
     $("div#space4").click(function() {
       $("div#space4").css("background-image", "url('img/x.png')");
+
     });
 
     $("div#space5").click(function() {
       $("div#space5").css("background-image", "url('img/x.png')");
+
     });
 
     $("div#space6").click(function() {
       $("div#space6").css("background-image", "url('img/x.png')");
+
     });
 
     $("div#space7").click(function() {
       $("div#space7").css("background-image", "url('img/x.png')");
+
     });
 
     $("div#space8").click(function() {
       $("div#space8").css("background-image", "url('img/x.png')");
+
     });
 
     $("div#space9").click(function() {
       $("div#space9").css("background-image", "url('img/x.png')");
+
     });
-    } else {
 
     $("div#space1").click(function() {
       $("div#space1").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space2").click(function() {
       $("div#space2").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space3").click(function() {
       $("div#space3").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space4").click(function() {
       $("div#space4").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space5").click(function() {
       $("div#space5").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space6").click(function() {
       $("div#space6").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space7").click(function() {
       $("div#space7").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space8").click(function() {
       $("div#space8").css("background-image", "url('img/o.jpg')");
+
     });
 
     $("div#space9").click(function() {
       $("div#space9").css("background-image", "url('img/o.jpg')");
     });
-    };
 });

@@ -50,3 +50,25 @@ describe("Board", function() {
     testBoard.spaces.length.should.equal(9);
   }); // you write the rest!
 });
+describe("Game", function() {
+  describe("initilize", function() {
+    it("sets current player as player1", function() {
+      var newGame = Object.create(Game);
+      newGame.initialize();
+      newGame.currentPlayer.symbol.should.equal("x");
+    });
+    it("creates only two players", function() {
+      var newGame = Object.create(Game);
+      newGame.initialize();
+      newGame.players.length.should.eql(2);
+    });
+  });
+  describe("nextTurn", function() {
+    var newGame = Object.create(Game);
+    newGame.initialize();
+    newGame.nextTurn();
+    it("switches current player between player1 and player2", function() {
+      newGame.currentPlayer.should.eql(newGame.players[1]);
+    });
+  });
+});

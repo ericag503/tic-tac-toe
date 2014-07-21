@@ -2,9 +2,47 @@ h1 {
   font-size: 4em;
   color: #654df0;
 }
-#space1, #space2, #space3, #space4, #space5, #space6, #space7, #space8, #space9 {
+.space {
   height: 260px;
   width: 285px;
   border: 5px solid black;
 }
+
+#space1 {
+  background-size: 100% 100%;
+}
+
+#space2 {
+  background-size: 100% 100%;
+}
+
+#space3 {
+  background-size: 100% 100%;
+}
+
+#space4 {
+  background-size: 100% 100%;
+}
+
+#space5 {
+  background-size: 100% 100%;
+}
+
+#space6 {
+  background-size: 100% 100%;
+}
+
+#space7 {
+  background-size: 100% 100%;
+}
+
+#space8 {
+  background-size: 100% 100%;
+}
+
+#space9 {
+  background-size: 100% 100%;
+}
+
+
 
